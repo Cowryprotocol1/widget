@@ -26,7 +26,7 @@ class WithdrawalWidget {
     const dynamicBut: HTMLElement = document.createElement("button");
     dynamicBut.classList.add("bg-[#2EC363]" ,"mt-4", "text-white", "rounded", "px-4", "py-2", "text-xs", "openModal");
     dynamicBut.innerHTML = "Withdraw";
-    dynamicBut.setAttribute('id', 'withdraw_but')
+    dynamicBut.setAttribute('id', 'withdraw_button')
     this.initialButton = dynamicBut;
 
     const modalContainer: HTMLElement = document.createElement("div");
