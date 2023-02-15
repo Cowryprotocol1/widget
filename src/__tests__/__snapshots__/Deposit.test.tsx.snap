@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Withdrawal Component  ❌ renders DepositModal Component correctly' 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-white w-[35%] py-4 px-[2.5%] rounded"
+  >
+    <div
+      class="w-full p-3 flex flex-row bg-[#062638] rounded-lg"
+    >
+      <div
+        class="flex text-sm flex-col justify-start"
+      >
+        <p
+          class="text-white font-thin mb-2 text-left"
+        >
+          Make Deposit
+        </p>
+        <p
+          class="text-white font-thin text-left md:text-xs text-[0.7rem]"
+        >
+          Please kindly fill in the necessary details for your deposit below.
+        </p>
+      </div>
+      <img
+        alt="logo_name_c"
+        class="w-[65px] md:w-[90px]"
+        src="deposit.png"
+      />
+    </div>
+    <div
+      class="flex flex-col items-center gap-6 mt-8 w-[100%]"
+    >
+      <div
+        class="w-[100%] relative mb-2"
+      >
+        <input
+          class="px-4 border-1 h-[45px] bg-[#EDEDED] text-black w-full md:w-[100%] text-xs  font-thin rounded"
+          data-testid="form"
+          maxlength="100"
+          name="address"
+          placeholder="Wallet Address"
+          type="text"
+          value=""
+        />
+        <p
+          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+        >
+          Wallet Address
+        </p>
+      </div>
+      <div
+        class="w-[100%] relative mb-2"
+      >
+        <input
+          class="px-4 border-1 h-[45px] bg-[#EDEDED] text-black w-full md:w-[100%] text-xs  font-thin rounded"
+          data-testid="form"
+          maxlength="100"
+          name="amount"
+          placeholder="Deposit Amount"
+          type="text"
+          value=""
+        />
+        <p
+          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+        >
+          Deposit Amount
+        </p>
+      </div>
+      <div
+        class="w-[100%] relative mb-2"
+      >
+        <input
+          class="px-4 border-1 h-[45px] bg-[#EDEDED] text-black w-full md:w-[100%] text-xs  font-thin rounded"
+          data-testid="form"
+          maxlength="100"
+          name="bank"
+          placeholder="Deposit Bank Name"
+          type="text"
+          value=""
+        />
+        <p
+          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+        >
+          Deposit Bank Name
+        </p>
+      </div>
+      <div
+        class="w-[100%] relative mb-2"
+      >
+        <input
+          class="px-4 border-1 h-[45px] bg-[#EDEDED] text-black w-full md:w-[100%] text-xs  font-thin rounded"
+          data-testid="form"
+          maxlength="100"
+          name="description"
+          placeholder="Transaction Description"
+          type="text"
+          value=""
+        />
+        <p
+          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+        >
+          Transaction Description
+        </p>
+      </div>
+      <button
+        class="bg-gray-300 text-black rounded px-4 py-2 text-xs"
+        data-testid="submit_btn"
+        disabled=""
+      >
+        Proceed
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
