@@ -13,9 +13,11 @@ class WithdrawalWidget {
   closeIcon: any;
   widgetContainer: any;
   modalInner : any;
+  showButton: boolean;
 
   constructor() {
     this.open = false;
+    this.showButton = false;
     this.initialize();
 
   }
@@ -24,7 +26,7 @@ class WithdrawalWidget {
   async initialize(){
 
     const dynamicBut: HTMLElement = document.createElement("button");
-    dynamicBut.classList.add("bg-[#2EC363]" ,"mt-4", "text-white", "rounded", "px-4", "py-2", "text-xs", "openModal");
+    dynamicBut.classList.add("bg-[#2EC363]", "hidden" ,"mt-4", "text-white", "rounded", "px-4", "py-2", "text-xs", "openModal");
     dynamicBut.innerHTML = "Withdraw";
     dynamicBut.setAttribute('id', 'withdraw_button')
     this.initialButton = dynamicBut;
@@ -54,7 +56,20 @@ class WithdrawalWidget {
 
   }
 
-  
+  show() {
+    this.showButton = !this.showButton;
+    
+    if (this.showButton) {
+      this.initialButton.classList.add("block")
+      this.initialButton.classList.remove("hidden")
+
+    } else {
+      this.initialButton.classList.add("hidden")
+      this.initialButton.classList.remove("block")
+    }
+  }
+
+
   toggleOpen() {
     this.open = !this.open;
     
