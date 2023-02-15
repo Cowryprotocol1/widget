@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Deposit from '../assets/deposit.png'
-
+import Image from './bg';
 
 type WithdrawModalProps = {
   UserWalletBalance: any;
@@ -98,7 +98,7 @@ const handleWithdrawIntent =()=>{
 }
 
   return (
-    <div className="bg-white  w-[35%] py-4 px-[2.5%] rounded">
+    <div className="bg-white  xs:w-[100%]  md:w-[35%] py-4 px-[2.5%] rounded">
 
         <div className="w-full p-3 flex flex-row bg-[#062638] rounded-lg">
           <div className="flex text-sm flex-col justify-start">
@@ -109,11 +109,7 @@ const handleWithdrawIntent =()=>{
               {next === 3  && "Please confirm withdrawal details below."}
             </p>
           </div>
-          <img 
-            src={Deposit}
-            alt="logo_name_c"
-            className="w-[65px] md:w-[90px]"
-          />
+          <Image />
         </div>
 
       

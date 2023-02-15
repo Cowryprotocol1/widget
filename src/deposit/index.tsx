@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Deposit from '../assets/deposit.png'
 import { currencyFormatter } from '../withdrawal';
-import { HiOutlineArrowSmLeft} from 'react-icons/hi';
+import Image from '../withdrawal/bg';
 
 type DepositModalProps = {
   minDeposit: any;
@@ -77,7 +77,7 @@ const handleDepositIntent =()=>{
 }
 
   return (
-    <div className="bg-white  w-[35%] py-4 px-[2.5%] rounded">
+    <div className="bg-white w-[40%]  md:w-[35%] py-4 px-[2.5%] rounded">
 
         <div className="w-full p-3 flex flex-row bg-[#062638] rounded-lg">
           <div className="flex text-sm flex-col justify-start">
@@ -88,11 +88,7 @@ const handleDepositIntent =()=>{
               {next === 3 && "You can buy your cowry token by depositing into the IFP account below."}
             </p>
           </div>
-          <img 
-            src={Deposit}
-            alt="logo_name_c"
-            className="w-[65px] md:w-[90px]"
-          />
+          <Image />
         </div>
 
       
