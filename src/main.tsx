@@ -6,6 +6,5 @@ import './index.css'
 export const withdrawWidget = initializeWithdrawalWidget();
 export const depositWidget = initializeDepositWidget();
 console.log("Cowry Protocol Widget script running on your application!")
-withdrawWidget.show();
-depositWidget.show();
+
 
