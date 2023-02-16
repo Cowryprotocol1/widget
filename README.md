@@ -43,20 +43,18 @@ yarn test
 yarn start
 ```
 
-### Continuous Integration
-
-Testing and deployment scripts available inside this example repository using [GitHub Actions](https://github.com/features/actions).
-
 ## Usage
 
-For ease of accessibility, the widget was connected to a Content Delivery Network. Thus a sharable CDN link is available below:
+For ease of accessibility, the widget was connected to a Content Delivery Network. Thus sharable CDN links is available below:
 
 ```
 <!-- js file -->
-https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/index-v1.0.2.js
+https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/withdraw.js
+
+https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/deposit.js
 
 <!-- css file -->
-https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/index-v1.0.2.css
+https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/index-v1.0.3.css
 ```
 
 Add them to your html file as shown below
@@ -67,24 +65,26 @@ Add them to your html file as shown below
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CowryProtocol Widget</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/index-v1.0.2.css">
+    <title>Widget Demo</title>
+
+    <!-- Deposit widget -->
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/deposit.js"></script>
+
+    <!-- Withdraw widget -->
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/withdraw.js"></script>
+
+    <!-- Widget CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/index-v1.0.3.css">
+
   </head>
   <body>
-
-    <script type="module" src="https://cdn.jsdelivr.net/gh/todak2000/cowryProtocolWidget@main/src/js/assets/index-v1.0.2.js"></script>
+    <div id="root"></div>
 
   </body>
 </html>
 
+
 ```
-
-### methods
-
-To display either the Withdrawal or Deposit Widget. call
-
-1. Withdrawal Widget Button : `withdrawWidget.show()`
-2. Deposit Widget Button: `depositWidget.show()`
 
 ## Author
 
