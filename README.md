@@ -2,7 +2,7 @@
 
 Based on some stringent needs for vendor wallets to easily connect with CowryProtocol, the withdraw and deposit modal as designed and obtainable in the Cowry Protocol application were extracted and converted into individual widgets.
 
-# Example Widget
+# Example Widget [![CircleCI](https://dl.circleci.com/status-badge/img/gh/todak2000/cowryProtocolWidget/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/todak2000/cowryProtocolWidget/tree/main)
 
 A demo was created on Replt here
 
