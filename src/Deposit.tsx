@@ -31,17 +31,17 @@ class DepositWidget {
     const modalContainer: HTMLElement = document.createElement("div");
     modalContainer.style.position = "fixed";
     modalContainer.style.zIndex = "100";
-    modalContainer.classList.add("w-full", "h-[100vh]", "bg-[#21C460]", "p-8")
+    modalContainer.classList.add("w-full","h-[auto]", "md:h-[100vh]", "bg-[#f1f1f1]", "p-8")
     modalContainer.setAttribute('id', 'modalRoot')
     this.modalContainer = modalContainer;
 
     const modalInner: HTMLElement = document.createElement("div");
-    modalInner.classList.add("w-[90%]", "h-[90vh]", "bg-transparent", "flex", "flex-col", "justify-center", "items-center")
+    modalInner.classList.add("md:w-[90%]", "w-100%", "h-[90vh]", "bg-transparent", "flex", "flex-col", "justify-center", "items-center")
     this.modalInner = modalInner;
 
     const closeIconElement: HTMLElement = document.createElement("span");
     closeIconElement.innerHTML = CLOSE_ICON;
-    closeIconElement.classList.add("cursor-pointer", "bg-black", "absolute", "right-4", "top-4");
+    closeIconElement.classList.add("cursor-pointer","flex","p-4","rounded-full", "flex-col","items-center","justify-center", "bg-black", "absolute", "right-4", "top-4");
     this.closeIcon = closeIconElement;
 
     modalContainer.appendChild(this.closeIcon)

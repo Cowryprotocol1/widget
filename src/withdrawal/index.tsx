@@ -98,7 +98,8 @@ const handleWithdrawIntent =()=>{
 }
 
   return (
-    <div className="bg-white  xs:w-[100%]  md:w-[35%] py-4 px-[2.5%] rounded">
+    <>
+    <div className="bg-white  xs:w-[100%]  md:w-[35%] py-4 px-[2.5%] rounded mt-12">
 
         <div className="w-full p-3 flex flex-row bg-[#062638] rounded-lg">
           <div className="flex text-sm flex-col justify-start">
@@ -129,7 +130,7 @@ const handleWithdrawIntent =()=>{
               className={`px-4 border-1 h-[45px] ${name ==="amount" && UserWalletBalance !== null  && parseFloat(UserWalletBalance) < parseFloat(form.amount)? "bg-[#FBE1E1]" : "bg-[#EDEDED]"} text-black w-full md:w-[100%] text-xs  font-thin rounded`}
             />
 
-            <p className="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent">{placeholder}</p>
+            <p className="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent">{placeholder}</p>
             {name === "amount" &&
             <p className="text-[9px] text-[#414141]  px-1 text-right mb-[-1rem] bg-white">
               Wallet balance:{UserWalletBalance !== null  ? <span className="text-brand_primary_green">
@@ -200,7 +201,14 @@ const handleWithdrawIntent =()=>{
       {next === 2 && <p className='cursor-pointer text-[#818181] font-thin text-sm' onClick={handleBack}>Back</p>}
       </div>
     </div>
-
+    <footer className='text-[#062638] text-xs mt-4'>
+      Powered by  {' '} © {' '}
+      
+      <a href='https://cowryprotocol.io/'>
+        Cowry Protocol  {new Date().getFullYear()}
+      </a>
+    </footer>
+    </>
   );
 }
 

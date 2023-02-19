@@ -3,7 +3,7 @@
 exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] = `
 <DocumentFragment>
   <div
-    class="bg-white xs:w-[100%] md:w-[35%] py-4 px-[2.5%] rounded"
+    class="bg-white xs:w-[100%] md:w-[35%] py-4 px-[2.5%] rounded mt-12"
   >
     <div
       class="w-full p-3 flex flex-row bg-[#062638] rounded-lg"
@@ -206,7 +206,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           value=""
         />
         <p
-          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Withdraw Amount
         </p>
@@ -234,7 +234,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           value=""
         />
         <p
-          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Bank Name
         </p>
@@ -252,7 +252,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           value=""
         />
         <p
-          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Transaction Description
         </p>
@@ -270,7 +270,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           value=""
         />
         <p
-          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Account Number
         </p>
@@ -288,7 +288,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           value=""
         />
         <p
-          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Account Name
         </p>
@@ -306,7 +306,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           value=""
         />
         <p
-          class="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Phone Number
         </p>
@@ -320,5 +320,15 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
       </button>
     </div>
   </div>
+  <footer
+    class="text-[#062638] text-xs mt-4"
+  >
+    Powered by    ©  
+    <a
+      href="https://cowryprotocol.io/"
+    >
+      Cowry Protocol  2023
+    </a>
+  </footer>
 </DocumentFragment>
 `;

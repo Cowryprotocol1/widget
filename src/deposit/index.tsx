@@ -77,7 +77,8 @@ const handleDepositIntent =()=>{
 }
 
   return (
-    <div className="bg-white w-[40%]  md:w-[35%] py-4 px-[2.5%] rounded">
+    <>
+    <div className="bg-white w-[100%]  md:w-[35%] py-4 px-[2.5%] rounded">
 
         <div className="w-full p-3 flex flex-row bg-[#062638] rounded-lg">
           <div className="flex text-sm flex-col justify-start">
@@ -108,7 +109,7 @@ const handleDepositIntent =()=>{
               className={`px-4 border-1 h-[45px] ${name ==="amount" && minDeposit !== null  && parseFloat(minDeposit) > parseFloat(form.amount)? "bg-[#FBE1E1]" : "bg-[#EDEDED]"} text-black w-full md:w-[100%] text-xs  font-thin rounded`}
             />
             {name === "amount" && parseInt(form.amount) < 1000 }
-            <p className="text-[9px] text-[#414141] absolute top-[-0.5rem] md:top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent">{placeholder}</p>
+            <p className="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent">{placeholder}</p>
             {name ==="amount" && minDeposit !== null  && parseFloat(minDeposit) > parseFloat(form.amount) &&
             <p className="text-[9px] px-1 text-right mr-8 mb-[-1rem] bg-white text-[#E50808]">
               Sorry! you have to enter amount no less than {currencyFormatter.format(1000)}
@@ -177,7 +178,14 @@ const handleDepositIntent =()=>{
       {next === 2 && <p className='cursor-pointer text-[#818181] font-thin text-sm' onClick={handleBack}>Back</p>}
       </div>
     </div>
-
+    <footer className=' text-[#062638] text-xs mt-4'>
+      Powered by  {' '} © {' '}
+      
+      <a href='https://cowryprotocol.io/'>
+        Cowry Protocol  {new Date().getFullYear()}
+      </a>
+    </footer>
+  </>
   );
 }
 
