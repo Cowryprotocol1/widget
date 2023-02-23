@@ -215,7 +215,7 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
         >
           Wallet balance:
           <span
-            class="text-brand_primary_green"
+            class="text-[#21C460]"
           >
             NGN 3,000.00
           </span>
@@ -309,6 +309,24 @@ exports[`Withdrawal Component  ❌ renders Withdrawal Component correctly' 1`] =
           class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
         >
           Phone Number
+        </p>
+      </div>
+      <div
+        class="w-[100%] relative mb-2"
+      >
+        <input
+          class="px-4 border-1 h-[45px] bg-[#EDEDED] text-black w-full md:w-[100%] text-xs  font-thin rounded"
+          data-testid="form"
+          maxlength="100"
+          name="address"
+          placeholder="Wallet Address to withdraw from"
+          type="text"
+          value=""
+        />
+        <p
+          class="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent"
+        >
+          Wallet Address to withdraw from
         </p>
       </div>
       <button

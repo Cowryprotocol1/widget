@@ -15,7 +15,7 @@ describe("Withdrawal Component", () => {
   it(" ❌ count number of input in the form'", async () => {
     let component = testComponent();
     const formInputs = component.getAllByTestId('form')
-    expect(await formInputs).toHaveLength(6);
+    expect(await formInputs).toHaveLength(7);
    });
 
   it(" ❌ Submit Form Data'", () => {
@@ -44,6 +44,10 @@ describe("Withdrawal Component", () => {
     const phone:any = getByPlaceholderText('Phone Number');
     fireEvent.change(phone,{target: {value: '08012345678'}});
     expect(phone.value).toBe('08012345678');
+
+    const wallet:any = getByPlaceholderText('Wallet Address to withdraw from');
+    fireEvent.change(wallet,{target: {value: 'GT879NKH8JD83N3KJ4J6J6N'}});
+    expect(wallet.value).toBe('GT879NKH8JD83N3KJ4J6J6N');
 
     const button = getByTestId('submit_btn')
     fireEvent.click(button);
