@@ -6,9 +6,9 @@
     "node": "16.15.0"
   },
   "scripts": {
-    "start": "vite",
+    "start": "vite --host",
     "dev": "vite",
-    "build": "vite build --host",
+    "build": "vite build",
     "build:nc": "vite build",
     "preview": "vite preview",
     "test": "NODE_ENV=test jest"
