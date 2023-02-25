@@ -8,5 +8,5 @@ export const depositWidget = initializeDepositWidget();
 console.log("Cowry Protocol Widget script running on your application! Thanks****")
 
 
-// withdrawWidget.show()  // uncomment for withdraw
-depositWidget.show()  // uncoment for depost
+withdrawWidget.show()  // uncomment for withdraw
+// depositWidget.show()  // uncoment for depost
