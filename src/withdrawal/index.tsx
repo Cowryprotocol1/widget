@@ -36,6 +36,8 @@ export const currencyFormatter = new Intl.NumberFormat('en-US', {
 
 
 const WithdrawModal= ({UserWalletBalance}:WithdrawModalProps) => {
+  const url = (new URL(window.location.href)).searchParams;
+  const transaction_id = url.get("transaction_id")
 
   const [isLoading, setIsLoading] = useState(false)
   const [next, setNext] = useState(1);
@@ -158,7 +160,7 @@ const handleWithdrawIntent =()=>{
   setError("")
   setErrorAsset([])
   setIsLoading(true)
-  getWithdrawalIntent(form).then(res=>{
+  getWithdrawalIntent(form, transaction_id).then(res=>{
     setIsLoading(false)
     if (res?.error){
       if (typeof res?.error === "string") {

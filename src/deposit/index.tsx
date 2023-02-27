@@ -5,6 +5,7 @@ import { getDepositIntent, postPaymentConfirmation } from '../api';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import {FiCopy} from 'react-icons/fi';
+// import { useSearchParams } from 'react-router-dom';
 
 type DepositModalProps = {
   minDeposit: any;
@@ -27,7 +28,8 @@ export const copyToClipboard = (text: string)=>{
 }
 
 const DepositModal= ({minDeposit}:DepositModalProps) => {
-
+  const url = (new URL(window.location.href)).searchParams;
+  const transaction_id = url.get("transaction_id")
   const [isLoading, setIsLoading] = useState(false)
   const [next, setNext] = useState(1);
   const [form, setForm] = useState({
@@ -106,7 +108,7 @@ const handleConfirmation=()=>{
     phone_number:depositData?.phoneNumber,
     blockchain_address: form?.address,
     transaction_narration:depositData?.narration,
-    memo:depositData?.memo
+    memo:depositData?.memo,
   }
   // console.log(data, "payment details")
   postPaymentConfirmation(data).then((res:any)=>{
@@ -140,7 +142,7 @@ const handleDepositIntent = ()=>{
   setError("")
   setErrorAsset([])
   setIsLoading(true)
-  getDepositIntent(form).then((res:any)=>{
+  getDepositIntent(form, transaction_id).then((res:any)=>{
     setIsLoading(false)
     if (res?.error){
       if (typeof res?.error === "string") {

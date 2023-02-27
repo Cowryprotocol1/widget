@@ -1,15 +1,19 @@
 
 
-const url = `https://cowry-backend.herokuapp.com`
+// const url = `https://cowry-backend.herokuapp.com`
+const url = `http://127.0.0.1:8000`;
 
-export const getDepositIntent = async (data: any)=> {
+export const getDepositIntent = async (data: any, transaction_id:any)=> {
+  // console.log("using this one", data)
     let rData = {
       amount: parseFloat(data.amount),
       blockchainAddress: data.address,
       bankType: data.bank,
-      narration: data.description
-    }
-    // console.log(JSON.stringify(rData))
+      narration: data.description,
+      transaction_source: "sep",
+      transaction_Id: transaction_id,
+    };
+    console.log(JSON.stringify(rData))
     try {
       const response = await fetch(`${url}/deposit`, {
         method: 'POST',
@@ -25,7 +29,7 @@ export const getDepositIntent = async (data: any)=> {
     }
   };
  export const postPaymentConfirmation = async (data: any)=> {
-    // console.log(JSON.stringify(data))
+    console.log(JSON.stringify(data))
     try {
       const response = await fetch(`${url}/deposit`, {
         method: 'POST',
@@ -41,7 +45,7 @@ export const getDepositIntent = async (data: any)=> {
     }
   };
 
-  export const getWithdrawalIntent = async (data: any)=> {
+  export const getWithdrawalIntent = async (data: any, transaction_id:any)=> {
     let wData = {
       amount: parseFloat(data.amount),
       blockchain_address: data.address,
@@ -49,9 +53,12 @@ export const getDepositIntent = async (data: any)=> {
       account_number: data.account_number,
       name_on_acct: data.account_name,
       phone_number: data.phone,
-      transaction_narration: data.description
+      transaction_narration: data.description,
+      transaction_source: "sep",
+      transaction_Id: transaction_id,
+      
     }
-    // console.log(wData)
+    // console.log("withdrawal data", wData)
     try {
       const response = await fetch(`${url}/withdrawal`, {
         method: 'POST',
