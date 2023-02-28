@@ -233,13 +233,13 @@ const handleWithdrawIntent =()=>{
               data-testid={test_id}
               maxLength={name === "account_number" ? 10 : 100}
               onChange={handleChange}
-              className={`px-4 border-1 h-[45px] ${name ==="amount" && UserWalletBalance !== null  && parseFloat(UserWalletBalance) < parseFloat(form.amount)? "bg-[#FBE1E1]" : "bg-[#EDEDED]"} text-black w-full md:w-[100%] text-xs  font-thin rounded`}
+              className={`px-4 border-1 h-[45px] ${name ==="amount" && UserWalletBalance !== null  && parseFloat(UserWalletBalance) > parseFloat(form.amount)? "bg-[#FBE1E1]" : "bg-[#EDEDED]"} text-black w-full md:w-[100%] text-xs  font-thin rounded`}
             />
 
             <p className="text-[9px] text-[#414141] absolute top-[-0.9rem] px-1 left-0 md:left-0 bg-transparent">{placeholder}</p>
             {name === "amount" &&
             <p className="text-[9px] text-[#414141]  px-1 text-right mb-[-1rem] bg-white">
-              Wallet balance:{UserWalletBalance !== null  ? <span className="text-[#21C460]">
+              Minimum Withdrawable amt:{UserWalletBalance !== null  ? <span className="text-[#21C460]">
               {currencyFormatter.format(UserWalletBalance)}
               </span>
             :" ₦0.00"}</p>
@@ -286,8 +286,8 @@ const handleWithdrawIntent =()=>{
         <>
         <button 
         data-testid="submit_btn"
-        className={`${UserWalletBalance !== null && parseFloat(UserWalletBalance) < parseFloat(form.amount) || form.bank === '' || form.account_name === '' || form.account_number === '' || form.account_number.length < 10 || form.phone === '' || form.description === '' || form.amount === '' || form.address === '' ? "bg-gray-300 text-black" :"bg-[#062638] mt-2 text-white"} rounded px-4 py-2 text-xs`}
-        disabled={UserWalletBalance !== null && parseFloat(UserWalletBalance) < parseFloat(form.amount) || form.bank === '' || form.account_name === '' || form.account_number === '' || form.account_number.length < 10 || form.phone === '' || form.description === '' || form.amount === '' || form.address === '' ? true: false} 
+        className={`${UserWalletBalance !== null && parseFloat(UserWalletBalance) > parseFloat(form.amount) || form.bank === '' || form.account_name === '' || form.account_number === '' || form.account_number.length < 10 || form.phone === '' || form.description === '' || form.amount === '' || form.address === '' ? "bg-gray-300 text-black" :"bg-[#062638] mt-2 text-white"} rounded px-4 py-2 text-xs`}
+        disabled={UserWalletBalance !== null && parseFloat(UserWalletBalance) > parseFloat(form.amount) || form.bank === '' || form.account_name === '' || form.account_number === '' || form.account_number.length < 10 || form.phone === '' || form.description === '' || form.amount === '' || form.address === '' ? true: false} 
         onClick={()=>{
           if (next === 1){
             setNext(2)
@@ -299,7 +299,7 @@ const handleWithdrawIntent =()=>{
           {next === 2 && !isLoading && "Confirm Withdrawal"}
           {next === 2 && isLoading && "Confirming..."}
         </button>
-        {UserWalletBalance !== null && parseFloat(UserWalletBalance) >= parseFloat(form.amount) &&
+            {UserWalletBalance !== null && parseFloat(form.amount) >= parseFloat(UserWalletBalance) &&
         <p className="font-thin text-xs text-[#818181]">You will receive <span className="text-[#062638] font-medium">{currencyFormatter.format(parseFloat(form.amount))}</span> into your fiat account </p>
         }
         </>
