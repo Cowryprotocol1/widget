@@ -13,10 +13,17 @@ export default defineConfig({
       },
       output: [
         {
-          name: "deposit",
           dir: "deposit",
+          entryFileNames: `[name].js`,
+          assetFileNames: `[name].css`,
+          manualChunks: undefined,
         },
+        // "deposit",
+        // dir: "deposit",
+        // },
       ],
     },
   },
 });
+
+

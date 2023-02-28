@@ -12,8 +12,10 @@ export default defineConfig({
       },
       output: [
         {
-          name: "withdraw",
           dir: "withdraw",
+          entryFileNames: `[name].js`,
+          assetFileNames: `[name].css`,
+          manualChunks: undefined,
         },
       ],
     },
