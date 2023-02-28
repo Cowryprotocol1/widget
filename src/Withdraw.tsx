@@ -53,7 +53,7 @@ class WithdrawalWidget {
     // dynamicBut.addEventListener("click", this.toggleOpen.bind(this));
     // closeIconElement.addEventListener("click", this.toggleOpen.bind(this));
     this.modalContainer.classList.add("absolute", "top-0")
-    ReactDOM.render(<WithdrawModal UserWalletBalance="2000" />, this.modalInner)
+    ReactDOM.render(<WithdrawModal UserWalletBalance="1000" />, this.modalInner)
     document.body.appendChild(this.modalContainer)
 
   }
