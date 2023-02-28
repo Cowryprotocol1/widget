@@ -1,15 +1,13 @@
 {
   "name": "my_app",
   "private": true,
-  "version": "0.1.0",
-  "engines": {
-    "node": "16.15.0"
-  },
+  "version": "0.0.0",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "tsc -p tsconfig.prod.json && vite build",
     "build:nc": "vite build",
+    "build-all": "vite build --config vite.config.deposit.ts && vite build --config vite.config.withdraw.ts",
     "preview": "vite preview",
     "test": "NODE_ENV=test jest"
   },
