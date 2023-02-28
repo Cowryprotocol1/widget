@@ -49,38 +49,41 @@ class WithdrawalWidget {
     modalContainer.appendChild(this.closeIcon)
     modalContainer.append(modalInner);
 
-    document.body.appendChild(dynamicBut); 
-    dynamicBut.addEventListener("click", this.toggleOpen.bind(this));
-    closeIconElement.addEventListener("click", this.toggleOpen.bind(this));
+    // document.body.appendChild(dynamicBut); 
+    // dynamicBut.addEventListener("click", this.toggleOpen.bind(this));
+    // closeIconElement.addEventListener("click", this.toggleOpen.bind(this));
+    this.modalContainer.classList.add("absolute", "top-0")
+    ReactDOM.render(<WithdrawModal UserWalletBalance="2000" />, this.modalInner)
+    document.body.appendChild(this.modalContainer)
 
   }
 
   show() {
     this.showButton = !this.showButton;
     
-    if (this.showButton) {
-      this.initialButton.classList.add("block")
-      this.initialButton.classList.remove("hidden")
+    // if (this.showButton) {
+    //   this.initialButton.classList.add("block")
+    //   this.initialButton.classList.remove("hidden")
 
-    } else {
-      this.initialButton.classList.add("hidden")
-      this.initialButton.classList.remove("block")
-    }
+    // } else {
+    //   this.initialButton.classList.add("hidden")
+    //   this.initialButton.classList.remove("block")
+    // }
   }
 
 
-  toggleOpen() {
-    this.open = !this.open;
+  // toggleOpen() {
+  //   this.open = !this.open;
     
-    if (this.open) {
-      this.modalContainer.classList.add("absolute", "top-0")
-      ReactDOM.render(<WithdrawModal UserWalletBalance="2000"/>, this.modalInner)
-      document.body.appendChild(this.modalContainer)
+  //   if (this.open) {
+  //     this.modalContainer.classList.add("absolute", "top-0")
+  //     ReactDOM.render(<WithdrawModal UserWalletBalance="2000"/>, this.modalInner)
+  //     document.body.appendChild(this.modalContainer)
 
-    } else {
-      document.body.removeChild(this.modalContainer)
-    }
-  }
+  //   } else {
+  //     document.body.removeChild(this.modalContainer)
+  //   }
+  // }
 
 }
 
